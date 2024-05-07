@@ -1,0 +1,12 @@
+[Unit]
+Description=Fronius Power Meter Monitor
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/opt/fronius-power-monitor/fronius_power_monitor
+
+[Install]
+WantedBy=multi-user.target
